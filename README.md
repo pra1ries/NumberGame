@@ -3,8 +3,9 @@ A small game written in C#
 
 # How it works
 First, the program declares a Random, we'll use this later.
-
-`Random rn = new Random();`
+```
+Random rn = new Random();
+```
 
 The program prompts the user for the highest and lowest number that will be generated.
 
