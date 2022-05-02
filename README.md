@@ -9,7 +9,7 @@ Random rn = new Random();
 
 The program prompts the user for the highest and lowest number that will be generated.
 
-These
+These variable will be called `lo` and `hi`
 ```
  Console.WriteLine("Please set your number parameters.");
 
@@ -26,7 +26,7 @@ These
  
  Currently the user input is stored as `string`, so the program converts it to `int`.
  
- These variables are called `loi` and `hii`.
+ These variables will be called `loi` and `hii`.
  
  ```
  int loi = Convert.ToInt32(lo);
