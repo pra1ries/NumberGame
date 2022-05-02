@@ -2,7 +2,7 @@
 A small game written in C#
 
 # How it works
-First, the program declares a Random, we'll use this later.
+First, the program declares a `Random`, we'll use this later.
 ```
 Random rn = new Random();
 ```
