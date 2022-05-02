@@ -24,7 +24,7 @@ These
  string hi = Console.ReadLine();
 ```
  
- Currently the user input is stored as a `string`, so the program converts it to an `int`.
+ Currently the user input is stored as `string`, so the program converts it to `int`.
  
  These variables are called `loi` and `hii`.
  
