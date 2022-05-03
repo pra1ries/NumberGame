@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,16 +11,17 @@ namespace NumberGame2
         static void Main(string[] args)
         {
             Console.Clear();
+            Console.Title = "NumberGame";
             Random rn = new Random();
             Console.WriteLine("Please set your number parameters.");
             Console.Write("Low: ");
             string lo = Console.ReadLine();
-            int loi = Convert.ToInt32(lo);
             Console.WriteLine();
             Console.Write("High: ");
             string hi = Console.ReadLine();
-            int hii = Convert.ToInt32(hi);
             Console.Clear();
+            int loi = Convert.ToInt32(lo);
+            int hii = Convert.ToInt32(hi);
             int ran = rn.Next(loi, hii);
             int guessint;
             Console.WriteLine("Guess a number!");
