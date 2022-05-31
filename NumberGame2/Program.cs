@@ -26,7 +26,7 @@ namespace NumberGame2
                 int hii = Convert.ToInt32(hi);
                 if (loi >= hii)
                 {
-                    Console.WriteLine("The low value cannot be higher than the high value!");
+                    Console.WriteLine("The low value cannot be higher than or equal to the high value!");
                     Console.ReadKey();
                 }
                 else if (hii > loi)
