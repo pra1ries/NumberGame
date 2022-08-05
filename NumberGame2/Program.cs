@@ -43,20 +43,24 @@ namespace NumberGame2
                         Console.Clear();
                         if (guessint == ran)
                         {
+                            Console.Title = "NumberGame - Correct!";
                             Console.WriteLine("Correct!");
                             break;
                         }
                         else if (guessint > ran)
                         {
+                            Console.Title = "NumberGame - Lower!";
                             Console.WriteLine("Lower!");
                             guesscount++;
                         }
                         else if (guessint < ran)
                         {
+                            Console.Title = "NumberGame - Higher!";
                             Console.WriteLine("Higher!");
                             guesscount++;
                         }
                     } while (guessint != ran);
+                    Console.Title = "NumberGame";
                     Console.WriteLine("It took you " + guesscount + " guesses!");
                     Console.ReadKey();
                 }
