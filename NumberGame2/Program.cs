@@ -18,9 +18,21 @@ namespace NumberGame2
                 Console.WriteLine("Please set your number parameters.");
                 Console.Write("Low: ");
                 string lo = Console.ReadLine();
+                if (lo == "")
+                {
+                    Console.WriteLine("You cannot have a null value!");
+                    Console.ReadKey();
+                    Environment.Exit(0);
+                }
                 Console.WriteLine();
                 Console.Write("High: ");
                 string hi = Console.ReadLine();
+                if (hi == "")
+                {
+                    Console.WriteLine("You cannot have a null value!");
+                    Console.ReadKey();
+                    Environment.Exit(0);
+                }
                 Console.Clear();
                 int loi = Convert.ToInt32(lo);
                 int hii = Convert.ToInt32(hi);
@@ -43,20 +55,24 @@ namespace NumberGame2
                         Console.Clear();
                         if (guessint == ran)
                         {
+                            Console.Title = "NumberGame - Correct!";
                             Console.WriteLine("Correct!");
                             break;
                         }
                         else if (guessint > ran)
                         {
+                            Console.Title = "NumberGame - Lower!";
                             Console.WriteLine("Lower!");
                             guesscount++;
                         }
                         else if (guessint < ran)
                         {
+                            Console.Title = "NumberGame - Higher!";
                             Console.WriteLine("Higher!");
                             guesscount++;
                         }
                     } while (guessint != ran);
+                    Console.Title = "NumberGame";
                     Console.WriteLine("It took you " + guesscount + " guesses!");
                     Console.ReadKey();
                 }
