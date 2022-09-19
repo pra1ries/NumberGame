@@ -18,9 +18,21 @@ namespace NumberGame2
                 Console.WriteLine("Please set your number parameters.");
                 Console.Write("Low: ");
                 string lo = Console.ReadLine();
+                if (lo == "")
+                {
+                    Console.WriteLine("You cannot have a null value!");
+                    Console.ReadKey();
+                    Environment.Exit(0);
+                }
                 Console.WriteLine();
                 Console.Write("High: ");
                 string hi = Console.ReadLine();
+                if (hi == "")
+                {
+                    Console.WriteLine("You cannot have a null value!");
+                    Console.ReadKey();
+                    Environment.Exit(0);
+                }
                 Console.Clear();
                 int loi = Convert.ToInt32(lo);
                 int hii = Convert.ToInt32(hi);
