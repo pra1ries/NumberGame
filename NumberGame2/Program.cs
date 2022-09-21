@@ -22,41 +22,41 @@ namespace NumberGame2
                 Console.Write("High: ");
                 string hi = Console.ReadLine();
                 Console.Clear();
-                int loi = Convert.ToInt32(lo); // converts lo string to int
-                int hii = Convert.ToInt32(hi); // converts hi string to int
-                if (loi >= hii) // checks to make sure low value is not higher than the high value
+                int loi = Convert.ToInt32(lo);
+                int hii = Convert.ToInt32(hi);
+                if (loi >= hii)
                 {
-                    Console.WriteLine("The low value cannot be higher than or equal to the high value!"); // if low value is higher than the high value, return this message.
-                    Console.ReadKey(); // wait for a key to be pressed, then close application
+                    Console.WriteLine("The low value cannot be higher than or equal to the high value!");
+                    Console.ReadKey();
                 }
                 else if (hii > loi)
                 {
-                    int ran = rn.Next(loi, hii); // generates random number according to the parameters set earlier
+                    int ran = rn.Next(loi, hii);
                     int guessint;
                     Console.WriteLine("Guess a number!");
                     int guesscount = 1; 
                     do
                     {
                         Console.Write("Guess: ");
-                        string guess = Console.ReadLine(); // saves guess
-                        guessint = Convert.ToInt32(guess); // converts guess to integer
+                        string guess = Console.ReadLine();
+                        guessint = Convert.ToInt32(guess);
                         Console.Clear();
-                        if (guessint == ran) // checks to see if answer is correct
+                        if (guessint == ran)
                         {
                             Console.WriteLine("Correct!");
                             break;
                         }
-                        else if (guessint > ran) // checks to see if guess is higher than answer
+                        else if (guessint > ran)
                         {
                             Console.Title = "NumberGame - Lower!";
                             Console.WriteLine("Lower!");
-                            guesscount++; // adds 1 guess to guesscount
+                            guesscount++;
                         }
-                        else if (guessint < ran) // checks to see if guess is lower than answer
+                        else if (guessint < ran)
                         {
                             Console.Title = "NumberGame - Higher!";
                             Console.WriteLine("Higher!");
-                            guesscount++; // adds 1 guess to guesscount
+                            guesscount++;
                         }
                     } while (guessint != ran);
                     Console.Title = "NumberGame";
